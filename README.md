@@ -21,7 +21,7 @@
 
 | 首页 | 后台管理 |
 | :---: | :---: |
-| ![首页预览](https://github.com/user-attachments/assets/b12755c5-7669-408f-be05-2db6ba1b02cc) | ![后台预览](https://github.com/user-attachments/assets/d387794d-95f8-42e9-879d-41fc6c5f5fa8) |
+| ![首页预览](https://github.com/user-attachments/assets/b106be25-5be4-4ae6-98aa-e1fae38b5a3d) | ![后台预览](https://github.com/user-attachments/assets/710dc2fd-5b3a-4de6-9209-506cf7583e89) |
 
 ## ✨ 核心特性
 
