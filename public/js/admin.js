@@ -42,6 +42,44 @@ function showMessage(text, type = 'info') {
   }, 3000);
 }
 
+function showModalMessage(modalId, text, type = 'info') {
+  const messageBoxId = modalId.replace('Modal', 'Message');
+  const messageBox = document.getElementById(messageBoxId);
+  
+  if (!messageBox) {
+      console.warn('Message box not found for modal:', modalId);
+      showMessage(text, type); // Fallback
+      return;
+  }
+
+  messageBox.innerText = text;
+  messageBox.style.visibility = 'visible';
+  messageBox.style.display = 'block';
+  messageBox.style.padding = '10px';
+  messageBox.style.marginBottom = '15px';
+  messageBox.style.borderRadius = '4px';
+  messageBox.style.fontSize = '14px';
+
+  if (type === 'success') {
+    messageBox.style.backgroundColor = '#d4edda';
+    messageBox.style.color = '#155724';
+    messageBox.style.border = '1px solid #c3e6cb';
+  } else if (type === 'error') {
+    messageBox.style.backgroundColor = '#f8d7da';
+    messageBox.style.color = '#721c24';
+    messageBox.style.border = '1px solid #f5c6cb';
+  } else {
+    messageBox.style.backgroundColor = '#d1ecf1';
+    messageBox.style.color = '#0c5460';
+    messageBox.style.border = '1px solid #bee5eb';
+  }
+
+  setTimeout(() => {
+    messageBox.style.visibility = 'hidden';
+    messageBox.style.display = 'none';
+  }, 3000);
+}
+
 function updatePaginationButtons() {
   if (prevPageBtn) prevPageBtn.disabled = currentPage <= 1;
   if (nextPageBtn) nextPageBtn.disabled = currentPage >= Math.ceil(totalItems / pageSize);
